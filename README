@@ -8,3 +8,5 @@ Managed by Vundle, so install that on a new checkout:
 Finally move vimrc into place:
     
     $ ln -s vimrc ~/.vimrc
+
+Based on [Adam Greig's vim config](https://github.com/adamgreig/dotvim).

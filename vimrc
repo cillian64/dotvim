@@ -1,6 +1,7 @@
 " .vimrc
-" Adam Greig
-" https://github.com/adamgreig/dotvim
+" David Turner
+" https://github.com/cillian64/dotvim
+" Based on Adam Greig's vimrc: https://github.com/adamgreig/dotvim
 
 " vim is not vi
 set nocompatible
@@ -8,14 +9,6 @@ set nocompatible
 " use a more compatible shell
 if $SHELL =~ "fish"
     set shell=/bin/sh
-endif
-
-" use a thin cursor on gnome-terminal
-" experimental, will only work when editing locally
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 endif
 
 " load plugins via vundle
@@ -27,11 +20,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'wincent/Command-T'
-Plugin 'sjl/gundo.vim'
-Plugin 'briandoll/change-inside-surroundings.vim'
 Plugin 'ervandew/supertab'
-Plugin 'vim-scripts/swap-parameters'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-expand-region'
@@ -41,18 +30,14 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'
 Plugin 'vim-scripts/opencl.vim'
 Plugin 'petRUShka/vim-pyopencl'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vim-pandoc/vim-pandoc'
+"Plugin 'vim-pandoc/vim-pandoc-syntax'
+"Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'fatih/vim-go'
 Plugin 'racer-rust/vim-racer'
 
-" To consider:
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'jamessan/vim-gnupg'
 call vundle#end()
 filetype plugin indent on
 
@@ -138,15 +123,13 @@ noremap : ;
 map q; ;q
 
 " plugin key bindings
-nnoremap <F5> :GundoToggle<CR>
-"map <F2> :NERDTreeToggle<CR>
-"map <F3> :call FindInNERDTree()<CR>
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
+" Leave these as defaults so I might remember them.
+"vmap v <Plug>(expand_region_expand)
+"vmap <C-v> <Plug>(expand_region_shrink)
 
 " Unmap nerdcommenter's comment-invert, map instead change-inside-surroundings
-nnoremap <leader>Ci <Plug>NERDCommenterInvert
-nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
+"nnoremap <leader>Ci <Plug>NERDCommenterInvert
+"nmap <script> <silent> <unique> <Leader>ci :ChangeInsideSurrounding<CR>
 
 " filetype specific settings
 autocmd FileType make setlocal noexpandtab
@@ -199,12 +182,6 @@ let g:pandoc#formatting#mode = 'ha'
 
 " don't use rust.vim's default 99-char lines
 let g:rust_recommended_style = 0
-
-" vim-racer
-set hidden
-let g:racer_cmd = "/home/adam/.cargo/bin/racer"
-let $RUST_SRC_PATH="/home/adam/.cargo/src/rustc-1.8.0/src/"
-let $CARGO_HOME="/home/adam/.cargo/"
 
 " vim-go
 let g:go_fmt_autosave = 1
