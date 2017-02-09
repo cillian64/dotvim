@@ -19,23 +19,23 @@ call vundle#begin()
 " Utilities
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ervandew/supertab'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'terryma/vim-expand-region'
+"Plugin 'terryma/vim-expand-region'
 
 " Language/Syntax Support
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'groenewege/vim-less'
-Plugin 'vim-scripts/opencl.vim'
-Plugin 'petRUShka/vim-pyopencl'
+"Plugin 'kchmck/vim-coffee-script'
+"Plugin 'groenewege/vim-less'
+"Plugin 'vim-scripts/opencl.vim'
+"Plugin 'petRUShka/vim-pyopencl'
 "Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'rust-lang/rust.vim'
 Plugin 'stephpy/vim-yaml'
-Plugin 'sirtaj/vim-openscad'
-Plugin 'fatih/vim-go'
+"Plugin 'sirtaj/vim-openscad'
+"Plugin 'fatih/vim-go'
 Plugin 'racer-rust/vim-racer'
 
 call vundle#end()
