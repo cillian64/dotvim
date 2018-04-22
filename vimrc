@@ -121,6 +121,11 @@ noremap ; :
 noremap : ;
 " Don't show the stupid recent-commands window by accident
 map q; ;q
+" Remap split-window navigation commands
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " plugin key bindings
 " Leave these as defaults so I might remember them.
