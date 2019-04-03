@@ -19,7 +19,7 @@ call vundle#begin()
 " Utilities
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-"Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 "Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
@@ -75,7 +75,7 @@ set wildignore=*.pyc
 set title
 set showcmd
 set showmode
-set visualbell
+"set visualbell
 set ruler
 set cursorline
 set listchars=tab:›\ ,trail:·
