@@ -174,10 +174,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_enable_signs = 1
 
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_error_symbol = "😞"
-let g:syntastic_style_warning_symbol = "😕"
+let g:syntastic_error_symbol = "E"
+let g:syntastic_warning_symbol = "W"
+let g:syntastic_style_error_symbol = "e"
+let g:syntastic_style_warning_symbol = "w"
 
 " use latex for plain .tex files
 let g:tex_flavor='latex'
